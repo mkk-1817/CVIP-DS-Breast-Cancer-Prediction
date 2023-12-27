@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Prediction Result</title>
+
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+            font-family: 'Arial', sans-serif; /* Specify your preferred font family */
+            color: #495057;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-box {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 80%;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 10px; 
+        }
+
+        .result-diagnostic {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .result-healthy {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Prediction Result:</h2>
+        {% if Prediction == 1 %}
+            <p class="result-diagnostic"><b>The individual is predicted to have cancer (Malignant).</b></p>
+        {% else %}
+            <p class="result-healthy"><b>The individual is predicted to be cancer-free (Benign).</b></p>
+        {% endif %}
+        <a href="/">Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #00ff00; /* Neon green font color */
+        }
+
+        p {
+            color: #00ccff; /* Neon blue font color */
+        }       
+
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <label for="mean_radius">Mean Radius:</label>
+        <input type="text" id="mean_radius" name="mean_radius" required>
+
+        <label for="mean_texture">Mean Texture:</label>
+        <input type="text" id="mean_texture" name="mean_texture" required>
+
+        <label for="mean_perimeter">Mean Perimeter:</label>
+        <input type="text" id="mean_perimeter" name="mean_perimeter" required>
+
+        <label for="mean_area">Mean Area:</label>
+        <input type="text" id="mean_area" name="mean_area" required>
+
+        <label for="mean_smoothness">Mean Smoothness:</label>
+        <input type="text" id="mean_smoothness" name="mean_smoothness" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
